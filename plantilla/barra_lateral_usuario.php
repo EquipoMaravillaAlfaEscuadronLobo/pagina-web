@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="noticias.php">
+                    <a href="../usuario/noticias.php">
                         <i class="material-icons col-blue-grey">description</i>
                         <span>Noticias</span>
                     </a>
@@ -54,13 +54,13 @@
                 </li>
                 <li class="header">Nosotros</li>
                 <li>
-                    <a href="#">
+                    <a href="../usuario/Contactenos.php">
                         <i class="material-icons col-red">contacts</i>
                         <span>Contactenos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../usuario/sugerencias.php">
                         <i class="material-icons col-amber">mail</i>
                         <span>Sugerencias</span>
                     </a>
