@@ -70,7 +70,7 @@ include_once '../plantilla/barraSuperior.php';
             <ul class="list">
                 <li class="header text-center">MENU</li>
                 <li>
-                    <a href="#">
+                    <a href="historia.php">
                         <i class="material-icons col-green">explore</i>
                         <span>Historia</span>
                     </a>
