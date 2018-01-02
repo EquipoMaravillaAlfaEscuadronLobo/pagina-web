@@ -2,8 +2,11 @@
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
-?>
 
+if ($_REQUEST['nameEnviar']) {
+    echo 'por aca esta pasando';
+}else {
+?>
 <section class="content">
     <div class="container-fluid">
         <!-- Google Maps -->
@@ -12,7 +15,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
         </div>
         <!-- Textarea -->
         <div class="row clearfix">
-            <form action="">
+            <form action="sugerencias.php" id="FORMULARIO">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header text-center">
@@ -23,7 +26,7 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                 <div class="col-sm-12">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <input type="text" class="form-control"placeholder="Escribe tu nombre" />
+                                            <input type="text" name="nameNombre" class="form-control"placeholder="Escribe tu nombre" />
                                         </div>
                                     </div>
                                     <br><br>
@@ -34,25 +37,22 @@ include_once '../plantilla/barra_lateral_usuario.php';
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn bg-orange waves-effect">
+                                    <button type="submit" class="btn bg-orange waves-effect" name="nameEnviar" value="ok">
                                         <i class="material-icons">save</i>
                                         <span>Enviar</span>
                                     </button>
                                 </div>
                             </div>
-
-
                         </div>
                     </div>
                 </div>
             </form>
         </div>
         <!-- #END# Textarea -->
-
-
     </div>
 </section>
 
 <?php
+}
 include_once '../plantilla/pie.php';
 ?>

@@ -6,10 +6,10 @@
                     <img src="../images/user.png" width="48" height="48" alt="User" />
                 </div>
                 <div class="info-container">
-                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">Administrador</div>
-                    <div class="email" style="color: black">opciones</div>
+                    <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000080; font-size: 18px;font-weight: bold; ">Administrador</div>
+                    <div class="email" style="color: #000080; font-size: 15px;font-weight: bold; " >opciones</div>
                     <div class="btn-group user-helper-dropdown">
-                        <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
+                        <i class="material-icons col-orange"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
                         <ul class="dropdown-menu pull-right">
                             <li><a href="#"><i class="material-icons">create</i>Editar password</a></li>
                             <li role="seperator" class="divider"></li>
@@ -57,7 +57,7 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2017 <a href="#">UES FMP</a>.
+                    &copy; 2018 <a href="../admin/login.php">UES FMP</a>.
                 </div>
                
             </div>

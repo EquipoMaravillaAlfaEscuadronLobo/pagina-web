@@ -18,6 +18,8 @@
 
 <!-- Demo Js -->
 <script src="../js/demo.js"></script>
+<script src="../js/mi_validacion.js"></script>
+<script src="../js/jquery.validate.js"></script>
 </body>
 
 </html>
