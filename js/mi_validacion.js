@@ -12,6 +12,10 @@ $(document).ready(function () {
                 required: true,
                 minlength: 3
             },
+            nameSugerencia: {
+                required: true,
+                minlength: 3
+            },
             nameApellido: {
                 required: true,
                 minlength: 3
@@ -61,6 +65,10 @@ $(document).ready(function () {
         messages: {
             nameNombre: {
                 required: "Por favor ingrese su Nombre",
+                minlength: "El nombre debe de tener por lo menos 3 caracteres"
+            },
+            nameSugerencia: {
+                required: "Por favor ingrese su sugerencia",
                 minlength: "El nombre debe de tener por lo menos 3 caracteres"
             },
             nameApellido: {
