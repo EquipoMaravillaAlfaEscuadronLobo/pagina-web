@@ -38,7 +38,7 @@
         <div class="card">
             <div class="body">
                 <form id="sign_in" method="POST">
-                    <div class="msg">Inicia tu sesión para contunuar</div>
+                    <div class="msg">Inicia tu sesión para continuar</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
