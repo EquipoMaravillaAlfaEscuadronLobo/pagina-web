@@ -15,9 +15,22 @@ if ($_REQUEST['nameEnviar']) {
      Conexion::abrir_conexion();
      repositorio_notificaciones::guardar_notificacion(Conexion::obtener_conexion(), $notficaciones);
      Conexion::cerrar_conexion();
-    
+     echo '<script>swal({
+                    title: "Bien",
+                    text: "Tu sugerencia a sido enviada!",
+                    type: "success",
+                    confirmButtonText: "ok",
+                    closeOnConfirm: false
+                },
+                function () {
+                    location.href="historia.php";
+                    
+                });</script>';    
 }else {
 ?>
+
+
+
 <section class="content">
     <div class="container-fluid">
         <!-- Google Maps -->
@@ -26,7 +39,7 @@ if ($_REQUEST['nameEnviar']) {
         </div>
         <!-- Textarea -->
         <div class="row clearfix">
-            <form action="sugerencias.php" id="FORMULARIO">
+            <form action="sugerencias.php" id="FORMULARIO" autocomplete="off">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header text-center">

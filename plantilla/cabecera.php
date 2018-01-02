@@ -8,6 +8,8 @@
 
         <!-- Favicon-->
         <link rel="icon" href="../favicon.ico" type="image/x-icon">
+        
+        <link href="../css/jquery.dataTables.min.css" rel="stylesheet">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -29,6 +31,9 @@
         <link href="../css/themes/all-themes.css" rel="stylesheet" />
         <script type="text/javascript" src="../js/jquery.min.js"></script>
         <script type="text/javascript" src="../js/jquery.validate.js"></script>
+        <link href="../css/sweetalert.css" rel="stylesheet">
+        <script src="../js/sweetalert.min.js"></script>
+        
     </head>
     <body class="theme-red">
 
