@@ -90,5 +90,26 @@ class repositorio_notificaciones {
         }
         //return $notificacion_actualizada;
     }
+    
+    public static function numero_notificaciones($conexion) {
+    $total = null ;
+    //echo 'no hay conexion ';
+        if (isset($conexion)) {
+            try {
+                //echo 'hay conexion';
+                $sql = "SELECT count(*) as total FROM  notificacion WHERE estado = 'PENDIENTE'"; ///estos son alias para que PDO pueda trabajar 
+                $sentencia = $conexion->prepare($sql);
+                $sentencia ->execute();
+                $resultado = $sentencia -> fetch();
+                
+                $total =$resultado['total'];
+                    
+            } catch (PDOException $ex) {
+                print 'ERROR: ' . $ex->getMessage();
+            }
+        }
+        return $total;
+        
+    }
 
 }

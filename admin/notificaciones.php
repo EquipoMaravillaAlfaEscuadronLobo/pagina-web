@@ -1,12 +1,11 @@
 <?php
-
-include_once '../plantilla/cabecera.php';
+include_once '../app/Conexion.php';
+Conexion::abrir_conexion();
+include_once '../plantilla/cabecera_admi.php';
 include_once '../plantilla/barra_superior_admi.php';
 include_once '../plantilla/barra_lateral_admi.php';
-include_once '../app/Conexion.php';
 include_once '../modelos/notificaciones.php';
 include_once '../repositorios/repositorio_notificaciones.php';
-Conexion::abrir_conexion();
 $notificaciones_pendientes = repositorio_notificaciones::notificaciones_pendientes(Conexion::obtener_conexion());
 ?>    
 
@@ -22,7 +21,7 @@ $notificaciones_pendientes = repositorio_notificaciones::notificaciones_pendient
             </div>
             <div class="panel-body">
 
-                <table padding="20px" class="responsive-table table-sm display" id="data-table-simple">
+                <table padding="20px" class="table table-striped" id="data-table-simple">
                     <thead class="">
                     <th class="text-center">Usuario</th>
                     <th class="text-center">Sugerencia</th>
@@ -44,6 +43,8 @@ $notificaciones_pendientes = repositorio_notificaciones::notificaciones_pendient
             </div>
         </div>
 </section>
+
+
 <?php
 repositorio_notificaciones::actualizar_notificacion(Conexion::obtener_conexion());
 Conexion::cerrar_conexion();

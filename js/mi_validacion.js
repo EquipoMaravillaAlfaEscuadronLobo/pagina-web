@@ -12,6 +12,14 @@ $(document).ready(function () {
                 required: true,
                 minlength: 3
             },
+            nameUsuario: {
+                required: true
+                
+            },
+            namePass: {
+                required: true
+               
+            },
             nameSugerencia: {
                 required: true,
                 minlength: 3
@@ -70,6 +78,14 @@ $(document).ready(function () {
             nameSugerencia: {
                 required: "Por favor ingrese su sugerencia",
                 minlength: "El nombre debe de tener por lo menos 3 caracteres"
+            },
+            nameUsuario: {
+                required: "ingrese Usuario"
+                
+            },
+            namePass: {
+                required: "Ingrese Contraseña"
+                
             },
             nameApellido: {
                 required: "Por favor ingrese su Apellido",

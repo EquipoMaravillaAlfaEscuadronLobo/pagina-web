@@ -31,7 +31,7 @@
         <link href="../css/themes/all-themes.css" rel="stylesheet" />
 
         <script type="text/javascript" src="../js/jquery.min.js"></script>
-        <!--<script src="../plugins/jquery/jquery.min.js"></script>-->
+        <script src="../plugins/jquery/jquery.min.js"></script>
         <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
 
         

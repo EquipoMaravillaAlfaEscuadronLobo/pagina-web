@@ -1,3 +1,26 @@
+<?php
+if (isset( $_REQUEST['nameEnviar'])) {
+   include_once '../app/Conexion.php';
+   include_once '../modelos/administrador.php';
+   include_once '../repositorios/repositorio_administrador.php';
+   
+   $usuario = $_REQUEST['nameUsuario'];
+   $pass = $_REQUEST['namePass'];
+   Conexion::abrir_conexion();
+   if (repositorio_administrador::verificar_pass(Conexion::obtener_conexion(), $pass, $usuario)) {
+       echo 'si es la contrasenia';
+       session_start();
+       $_SESSION['user'] = $usuario;
+   }
+   else{
+       echo 'no es conio';
+   }
+   
+   
+}else{
+?>
+
+
 ﻿<!DOCTYPE html>
 <html>
 
@@ -27,6 +50,8 @@
 
         <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
         <link href="../css/themes/all-themes.css" rel="stylesheet" />
+        
+         <script type="text/javascript" src="../js/jquery.min.js"></script>
     </head>
     <body class="login-page">
 
@@ -37,14 +62,14 @@
         </div>
         <div class="card">
             <div class="body">
-                <form id="sign_in" method="POST">
+                <form id="FORMULARIO" method="get" name="">
                     <div class="msg">Inicia tu sesión para continuar</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
                         <div class="form-line">
-                            <input type="text" class="form-control" name="username" placeholder="Usuario" required autofocus>
+                            <input type="text" class="form-control" name="nameUsuario" placeholder="Usuario" required autofocus>
                         </div>
                     </div>
                     <div class="input-group">
@@ -52,7 +77,7 @@
                             <i class="material-icons">lock</i>
                         </span>
                         <div class="form-line">
-                            <input type="password" class="form-control" name="password" placeholder="Cotraseña" required>
+                            <input type="password" class="form-control" name="namePass" placeholder="Cotraseña" required>
                         </div>
                     </div>
                     <div class="row">
@@ -60,7 +85,7 @@
                            
                         </div>
                         <div class="col-xs-4">
-                            <button class="btn btn-block bg-pink waves-effect" type="submit">Entrar</button>
+                            <button class="btn btn-block bg-pink waves-effect" type="submit" name="nameEnviar" value="ok">Entrar</button>
                         </div>
                     </div>
                     <div class="row m-t-15 m-b--20">
@@ -68,7 +93,7 @@
                             
                         </div>
                         <div class="col-xs-6 align-right">
-                            <a href="forgot-password.html">Olvidaste tu Contraseña?</a>
+                            <a href="#">Olvidaste tu Contraseña?</a>
                         </div>
                     </div>
                 </form>
@@ -78,5 +103,6 @@
 
 
 <?php
+}
 include_once '../plantilla/pie.php';
 ?>
