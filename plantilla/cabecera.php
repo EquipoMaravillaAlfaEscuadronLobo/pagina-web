@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Casa de Encuentro Juvenil, Verapaz San Vicente</title>
+        <marquee behavior="" direction=""><title>Casa de Encuentro Juvenil, Verapaz San Vicente</title></marquee>
 
         <!-- Favicon-->
         <link rel="icon" href="../favicon.ico" type="image/x-icon">
