@@ -22,6 +22,9 @@
 <script src="../js/jquery.dataTables.min.js"></script>
 <script src="../js/data-tables-script.js"></script>
 
+<script src="../plugins/jquery-validation/jquery.validate.js"></script>
+<script src="../js/pages/forms/form-validation.js"></script>
+<script src="../js/pages/forms/form-wizard.js"></script>
 </body>
 
 </html>
