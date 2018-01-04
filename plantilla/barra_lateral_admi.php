@@ -13,7 +13,7 @@
                         <ul class="dropdown-menu pull-right">
                             <li><a href="#"><i class="material-icons">create</i>Editar password</a></li>
                             <li role="seperator" class="divider"></li>
-                            <li><a href="#"><i class="material-icons">input</i>Salir</a></li>
+                            <li><a href="../sesiones/cerrar.php"><i class="material-icons">input</i>Salir</a></li>
                         </ul>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
             <!-- Footer -->
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2018 <a href="../admin/login.php">UES FMP</a>.
+                    &copy; 2018 <a href="#">UES FMP</a>.
                 </div>
                
             </div>

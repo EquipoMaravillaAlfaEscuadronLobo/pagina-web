@@ -21,6 +21,13 @@
         <div class="menu">
             <ul class="list">
                 <li class="header text-center">MENU</li>
+                 <li>
+                     <a href="../usuario/home_usuario.php">
+                            <i class="material-icons col-indigo">home</i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                
                 <li>
                     <a href="../usuario/historia.php">
                         <i class="material-icons col-green">explore</i>

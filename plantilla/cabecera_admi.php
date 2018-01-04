@@ -1,3 +1,11 @@
+<?php 
+session_start();
+    if (!isset($_SESSION['user'])) {
+        header("Location: ../usuario/home_usuario.php");
+    }
+    
+?>
+
 ﻿<!DOCTYPE html>
 <html>
 
