@@ -33,7 +33,7 @@ class repositorio_administrador {
 
         if (isset($conexion)) {
             try {
-                echo 'hay conexion<br>';
+             
                 if (password_verify($verificacion, $administrador_actual->getPass())) {///esto es para saber si las contrase;a para modificar es correcta
                   $respuesta = true ;  
                 } else {

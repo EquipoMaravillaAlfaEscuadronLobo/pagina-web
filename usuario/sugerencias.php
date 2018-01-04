@@ -6,7 +6,7 @@ include_once '../app/Conexion.php';
 include_once '../modelos/notificaciones.php';
 include_once '../repositorios/repositorio_notificaciones.php';
 
-if ($_REQUEST['nameEnviar']) {
+if (isset($_REQUEST['nameEnviar'])) {
     
     echo 'se esta enviado';
   $notficaciones = new notificaciones();
@@ -28,8 +28,6 @@ if ($_REQUEST['nameEnviar']) {
                 });</script>';    
 }else {
 ?>
-
-
 
 <section class="content">
     <div class="container-fluid">
