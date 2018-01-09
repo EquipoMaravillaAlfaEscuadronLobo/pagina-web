@@ -1,102 +1,32 @@
 <?php
-include_once '../plantilla/cabecera.php';
-include_once '../plantilla/barraSuperior.php';
+include_once '../plantilla/cabecera_admi.php';
+include_once '../plantilla/barra_superior_admi.php';
+include_once '../plantilla/barra_lateral_admi.php';
 ?>    
 
-<!-- Top Bar -->
-<?php include_once '../plantilla/barra_lateral_usuario.php'; ?>
-<!-- #Top Bar -->
-
-
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Viewer.js</title>
+  
   <link rel="stylesheet" href="../css/estilos.css"/>
-<section>
-    <!-- Left Sidebar -->
-    <aside id="leftsidebar" class="sidebar">
-        <div class="user-info">
-            <div class="image">
-                <!--<img src="images/user.png" width="48" height="48" alt="User" />-->
-            </div>
-            <div class="info-container">
-                <div class="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></div>
-                <div class="email"></div>
-                <div class="btn-group user-helper-dropdown">
-                    <i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"></i>
-                    <ul class="dropdown-menu pull-right">
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- Menu -->
-        <div class="menu">
-            <ul class="list">
-                <li class="header text-center">MENU</li>
-                <li>
-                    <a href="historia.php">
-                        <i class="material-icons col-green">explore</i>
-                        <span>Historia</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="galeria.php">
-                        <i class="material-icons col-blue">collections</i>
-                        <span>Galerias</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="noticias.php">
-                        <i class="material-icons col-blue-grey">description</i>
-                        <span>Noticias</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons col-deep-orange">book</i>
-                        <span>Catalogo de libros</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <i class="material-icons col-deep-purple">event</i>
-                        <span>Proximos Eventos</span>
-                    </a>
-                </li>
-                <li class="header">Nosotros</li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons col-red">contacts</i>
-                        <span>Contactenos</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="material-icons col-amber">mail</i>
-                        <span>Sugerencias</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-        <!-- #Menu -->
-        <!-- Footer -->
-        <div class="legal">
-            <div class="copyright">
-                &copy; 2017 <a href="#">UES FMP</a>.
-            </div>
-
-        </div>
-        <!-- #Footer -->
-    </aside>\
-    <!-- #END# Left Sidebar -->
-</section>
-
-  <section class="content">
+  
+</head>
+<body>
+    <section class="content">
         
             <div class="row">
-                <div class="col-md-12 text-center">
+                <div class="col-md-4 text-right">
+                    
+                </div>
+                <div class="col-md-4 text-Center">
                     <h1>Galeria</h1>
+                </div>
+                <div class="col-md-4 text-right">
+                    <button type="file" class=" btn btn-primary"><i class="material-icons col-white">add</i> Subir Imagenes</button>
                 </div>
             </div>
 	<div class="row">
@@ -211,5 +141,8 @@ popup.init()
 
   
     </section>
-  
-<?php include_once '../plantilla/pie.php';?>
+</body>
+</html>
+<?php
+include_once '../plantilla/pie.php';
+?>
