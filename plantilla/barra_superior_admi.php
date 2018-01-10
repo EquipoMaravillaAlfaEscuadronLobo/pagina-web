@@ -33,11 +33,11 @@ echo $numero;
                 <li>
                     <div class="user-info  btn-group user-helper-dropdown" >
                         <div class="image rounded-circle" id="circular" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            <img src="../images/user.png" width="48" height="48" alt="User"/>
+                            <img src="../images/user.png" width="48" height="48" style="margin-top: 10px" alt="User"/>
                         </div>
 
                         <ul class="dropdown-menu pull-right">
-                            <li><a href="#"><i class="material-icons">create</i>Editar password</a></li>
+                            <li><a href="../admin/editar_pass.php"><i class="material-icons">create</i>Editar password</a></li>
                             <li role="seperator" class="divider"></li>
                             <li><a href="../sesiones/cerrar.php"><i class="material-icons">input</i>Salir</a></li>
                         </ul>

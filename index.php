@@ -75,6 +75,13 @@
         <div class="menu">
             <ul class="list">
                 <li class="header text-center">MENU</li>
+                 <li>
+                     <a href=usuario/home_usuario.php">
+                            <i class="material-icons col-indigo">home</i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                
                 <li>
                     <a href="usuario/historia.php">
                         <i class="material-icons col-green">explore</i>
@@ -122,13 +129,11 @@
 
             </ul>
         </div>
-
-
         <!-- #Menu -->
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; 2017 <a href="#">UES FMP</a>.
+                &copy; 2018 <a href="../admin/login.php">UES FMP</a>.
             </div>
 
         </div>
