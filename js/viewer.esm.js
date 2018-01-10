@@ -2766,5 +2766,3 @@ var Viewer = function () {
 }();
 
 extend(Viewer.prototype, render, events, handlers, methods, others);
-
-export default Viewer;

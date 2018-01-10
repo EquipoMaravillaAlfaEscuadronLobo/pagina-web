@@ -24,9 +24,7 @@
 <script src="../js/pages/forms/form-validation.js"></script>
 <!--<script src="../js/pages/forms/form-wizard.js"></script>-->
 
-<!-- Custom Js -->
-<!--<script src="../js/admin.js"></script>-->
-
+<script src="../js/admin.js"></script>
 </body>
 
 </html>

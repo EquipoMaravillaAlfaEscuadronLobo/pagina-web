@@ -42,6 +42,7 @@ $notificaciones_pendientes = repositorio_notificaciones::notificaciones_pendient
                 </table>
             </div>
         </div>
+        </div>
 </section>
 
 
