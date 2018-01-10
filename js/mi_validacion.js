@@ -8,6 +8,12 @@ $.validator.setDefaults({
 $(document).ready(function () {
     $("#FORMULARIO").validate({
         rules: {
+            
+            nameActual:{
+                required: true
+                
+            },
+            
             nameNombre: {
                 required: true,
                 minlength: 3
@@ -71,6 +77,11 @@ $(document).ready(function () {
             }
         },
         messages: {
+            nameActual: {
+                required: "Por favor ingrese su contraseña acutal"
+                
+            },
+            
             nameNombre: {
                 required: "Por favor ingrese su Nombre",
                 minlength: "El nombre debe de tener por lo menos 3 caracteres"

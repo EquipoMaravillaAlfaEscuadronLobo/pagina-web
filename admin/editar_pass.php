@@ -3,29 +3,43 @@ include_once '../plantilla/cabecera_admi.php';
 include_once '../plantilla/barra_superior_admi.php';
 include_once '../plantilla/barra_lateral_admi.php';
 include_once '../app/Conexion.php';
-include_once '../modelos/notificaciones.php';
-include_once '../repositorios/repositorio_notificaciones.php';
+include_once '../modelos/administrador.php';
+include_once '../repositorios/repositorio_administrador.php';
 
 if (isset($_REQUEST['nameEnviar'])) {
+    $verificacion = $_REQUEST['nameActual'];
+    $pass = $_REQUEST['namePass1'];
+    Conexion::abrir_conexion();
     
-    
-  $notficaciones = new notificaciones();
-    $notficaciones ->setNombre_usuario($_REQUEST['nameNombre']);
-     $notficaciones ->setDescripcion($_REQUEST['nameSugerencia']);
-     Conexion::abrir_conexion();
-     repositorio_notificaciones::guardar_notificacion(Conexion::obtener_conexion(), $notficaciones);
-     Conexion::cerrar_conexion();
-     echo '<script>swal({
+    $boolean = repositorio_administrador::actualizar_pass(Conexion::obtener_conexion(), $verificacion, $_SESSION['user'], $pass);
+    Conexion::cerrar_conexion();
+    if ($boolean) {
+    echo '<script>swal({
                     title: "Bien",
-                    text: "Tu sugerencia a sido enviada!",
+                    text: "Tu contraseña a sido actualizada!",
                     type: "success",
                     confirmButtonText: "ok",
                     closeOnConfirm: false
                 },
                 function () {
-                    location.href="historia.php";
+                    location.href="home.php";
                     
-                });</script>';    
+                });</script>';        
+    }else{
+    echo '<script>swal({
+                    title: "Oops",
+                    text: "Contraseña incorrecta, Vuelve a intentar!",
+                    type: "error",
+                    confirmButtonText: "ok",
+                    closeOnConfirm: false
+                },
+                function () {
+                    location.href="editar_pass.php";
+                    
+                });</script>';            
+    }
+    
+    
 }else {
 ?>
 
@@ -37,7 +51,7 @@ if (isset($_REQUEST['nameEnviar'])) {
         </div>
         <!-- Textarea -->
         <div class="row clearfix">
-            <form action="sugerencias.php" id="FORMULARIO" autocomplete="off">
+            <form action="editar_pass.php" id="FORMULARIO" autocomplete="off">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="body">

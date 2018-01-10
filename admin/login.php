@@ -24,7 +24,7 @@ if (isset($_REQUEST['nameEnviar'])) {
                     
                 });</script>';
     } else {
-        echo 'no es la misma conio';
+        
         echo '<script>swal({
                     title: "Exito",
                      text: "Datos incorrectos",
