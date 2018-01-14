@@ -29,7 +29,7 @@ CREATE TABLE `administrador` (
 -- ----------------------------
 -- Records of administrador
 -- ----------------------------
-INSERT INTO `administrador` VALUES ('1', 'bubba', '$2y$10$xC2qfFYxPbsLPtyNjO/rHuahk6Mc20G3sY3OaJxmvbI8asoQHAgg6');
+INSERT INTO `administrador` VALUES ('1', 'admmin01', '$2y$10$2rho0MAZ5MwLDYw851GwB.6eHCBN0gIKsWJboakQ6epu1IOqsjphy');
 
 -- ----------------------------
 -- Table structure for autores
@@ -73,7 +73,9 @@ DROP TABLE IF EXISTS `eventos`;
 CREATE TABLE `eventos` (
   `id_evento` int(11) NOT NULL AUTO_INCREMENT,
   `id_administrador` int(11) NOT NULL,
-  `descripcion_evento` varchar(45) DEFAULT NULL,
+  `titular`varchar(45) DEFAULT NULL,
+  `descripcion_evento` text DEFAULT NULL,
+  `estado` varchar(45) DEFAULT NULL,
   `fecha` date DEFAULT NULL,
   PRIMARY KEY (`id_evento`),
   KEY `fk_eventos_administrador1_idx` (`id_administrador`),
@@ -186,7 +188,7 @@ DROP TABLE IF EXISTS `noticia`;
 CREATE TABLE `noticia` (
   `id_noticia` int(11) NOT NULL AUTO_INCREMENT,
   `id_administrador` int(11) NOT NULL,
-  `descripcion` varchar(2000) DEFAULT NULL,
+  `descripcion` text DEFAULT NULL,
   `estado` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_noticia`),
   KEY `fk_noticia_administrador1_idx` (`id_administrador`),

@@ -3,15 +3,16 @@ include_once '../app/Conexion.php';
 include_once '../plantilla/cabecera.php';
 include_once '../plantilla/barraSuperior.php';
 include_once '../plantilla/barra_lateral_usuario.php';
-include_once '../repositorios/repositorio_noticia.php';
+include_once '../modelos/eventos.php';
+include_once '../repositorios/repositorio_eventos.php';
 Conexion::abrir_conexion();
-$listado= repositorio_noticia::lista_noticias(Conexion::obtener_conexion());
+$listado= repositorio_eventos::lista_eventos(Conexion::obtener_conexion());
 ?>    
 
 <section class="content">
     <div class="container-fluid">
-        <div class="block-header">
-            <h1 class="text-Center">Seccion de Noticias</h1>
+        <div class="block-header text-Center">
+            <h1 class="text-Center">Próximos Eventos</h1>
         </div>
         <?php
         foreach ($listado as $fila){
@@ -19,13 +20,13 @@ $listado= repositorio_noticia::lista_noticias(Conexion::obtener_conexion());
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><b><?php echo $fila['nombre'];?></b></div>
+                    <div class="panel-heading"><b><?php echo $fila['titular'];?></b></div>
                     <div class="panel-body">
                         <div class="contenido">
-                        <?php echo $fila['descripcion'];?>
+                        <?php echo $fila['descripcion_evento'];?>
                         </div>
                     </div>
-                    <div class="panel-footer" id="<?php echo $fila['id_noticia'];?>">
+                    <div class="panel-footer" id="<?php echo $fila['fecha'];?>"><?php echo 'Fecha de Evento: '. date_format(date_create($fila['fecha']), 'd-m-Y');?>
                         <div class="fb-like" data-href="http://localhost/pagina-web/usuario/noticias.php#<?php echo $fila['id_noticia'];?>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                         <div class="fb-comments" data-href="http://localhost/pagina-web/usuario/noticias.php#<?php echo $fila['id_noticia'];?>" data-width="900" style="width: 100% !important;" data-numposts="5"></div>
                     </div>
