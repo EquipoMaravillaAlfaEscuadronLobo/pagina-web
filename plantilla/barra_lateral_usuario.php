@@ -54,7 +54,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="../usuario/ver_evento.php">
                         <i class="material-icons col-deep-purple">event</i>
                         <span>Proximos Eventos</span>
                     </a>

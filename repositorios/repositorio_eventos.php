@@ -47,4 +47,18 @@ class repositorio_eventos {
         return $resultado;
     }
 
+    public static function eliminar_evento($conexion, $codigo) {
+        $notificacion_actualizada = false;
+        if (isset($conexion)) {
+            try {
+                $sql = "UPDATE eventos SET estado = '0' where id_evento = '$codigo'";
+                echo 'el sql es ' . $sql;
+                $sentencia = $conexion->prepare($sql);
+                $notificacion_actualizada = $sentencia->execute();
+            } catch (PDOException $exc) {
+                echo $exc->getTraceAsString();
+            }
+        }
+        //return $notificacion_actualizada;
+    }
 }
