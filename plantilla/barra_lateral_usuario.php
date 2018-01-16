@@ -47,7 +47,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../usuario/catalogoLibros.php">
                         <i class="material-icons col-deep-orange">book</i>
                         <span>Catalogo de libros</span>
                     </a>
