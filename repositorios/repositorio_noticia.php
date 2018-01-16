@@ -47,7 +47,8 @@ noticia.estado,
 administrador.nombre
 FROM
 noticia
-INNER JOIN administrador ON noticia.id_administrador = administrador.id_administrador";
+INNER JOIN administrador ON noticia.id_administrador = administrador.id_administrador
+order by id_noticia desc";
                 
                 $resultado = $conexion->query($sql);
             } catch (PDOException $exc) {

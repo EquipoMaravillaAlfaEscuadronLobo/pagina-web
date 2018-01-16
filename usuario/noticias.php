@@ -19,12 +19,12 @@ $listado= repositorio_noticia::lista_noticias(Conexion::obtener_conexion());
         <div class="row">
             <div class="col-md-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading"><img src="favicon.ico"><?php echo $fila['nombre'];?></div>
+                    <div class="panel-heading"><b><?php echo $fila['nombre'];?></b></div>
                     <div class="panel-body"><?php echo $fila['descripcion'];?>
                        
                     </div>
                     <div class="panel-footer" id="<?php echo $fila['id_noticia'];?>">
-                      
+                        <div class="fb-like" data-href="http://localhost/pagina-web/usuario/noticias.php#<?php echo $fila['id_noticia'];?>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                         <div class="fb-comments" data-href="http://localhost/pagina-web/usuario/noticias.php#<?php echo $fila['id_noticia'];?>" data-width="900" style="width: 100% !important;" data-numposts="5"></div>
                     </div>
                 </div>
