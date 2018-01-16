@@ -8,7 +8,7 @@ $conexion= Conexion::obtener_conexion();
 $sql="Select * from foto";
 $sentencia=$conexion->prepare($sql);
 $sentencia->execute();
-                $resultado = $sentencia->fetchAll();
+$resultado = $sentencia->fetchAll();
 
 ?>    
 
@@ -69,7 +69,7 @@ Codepen: https://codepen.io/supah/
     foreach($resultado as $fila){
     ?>
   <figure>
-      <img src="<?php echo '../galeria/'.$fila['direccion']?>" alt="" />
+      <img src="<?php echo '../galeria/'.$fila['direccion']?>" alt="" class="fotoGaleria"/>
     
   </figure>
     <?php 

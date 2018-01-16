@@ -8,7 +8,9 @@
 img {
   display: block;
 }
-
+.fotoGaleria{
+    width: 25em;
+}
 .gallery {
   position: absolute;
   z-index: 2;
