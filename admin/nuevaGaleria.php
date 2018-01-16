@@ -2,6 +2,14 @@
 include_once '../plantilla/cabecera_admi.php';
 include_once '../plantilla/barra_superior_admi.php';
 include_once '../plantilla/barra_lateral_admi.php';
+include_once '../app/Conexion.php';
+Conexion::abrir_conexion();
+$conexion= Conexion::obtener_conexion();
+$sql="Select * from foto";
+$sentencia=$conexion->prepare($sql);
+$sentencia->execute();
+                $resultado = $sentencia->fetchAll();
+
 ?>    
 
 <!DOCTYPE>
@@ -25,10 +33,22 @@ include_once '../plantilla/barra_lateral_admi.php';
                 <div class="col-md-4 text-Center">
                     <h1>Galeria</h1>
                 </div>
-                <div class="col-md-4 text-right">
-                    <button type="file" class=" btn btn-primary"><i class="material-icons col-white">add</i> Subir Imagenes</button>
+                <div class="col-md-4 text-center">
+                   <div class="row">
+                       <form method="post" action="subirFotos.php" name="galeria" id="galeria" enctype="multipart/form-data">
+	
+	<label for="imagen">Subir Fotos</label> 
+	
+	
+           
+  	<input id="imagen" name="imagen[]" accept="image/*" size="30" type="file" multiple="multiple"  class="form-control"/>
+        <input type="submit" value="Guardar"  class="btn btn-success form-control"/>
+           </form>
+  	</div>
+                        
+  	</div>
                 </div>
-            </div>
+            
 	<div class="row">
             
             <!--
@@ -41,59 +61,21 @@ Twitter: https://twitter.com/supahfunk
 Codepen: https://codepen.io/supah/
 
 -->
+
+
+
 <div class="gallery">
+    <?php
+    foreach($resultado as $fila){
+    ?>
   <figure>
-    <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Daytona Beach <small>United States</small></figcaption>
+      <img src="<?php echo '../galeria/'.$fila['direccion']?>" alt="" />
+    
   </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>
-      Bad Pyrmont <small>Deutschland</small>
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Yellowstone National Park <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Highlands <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Daytona Beach <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>
-      Bad Pyrmont <small>Deutschland</small>
-    </figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Yellowstone National Park <small>United States</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
-  </figure>
-  <figure>
-    <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
-    <figcaption>Highlands <small>United States</small></figcaption>
-  </figure>
+    <?php 
+    }
+    ?>
+  
 </div>
 
 
