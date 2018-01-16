@@ -15,8 +15,9 @@ class repositorio_administrador {
 
                 if (count($resultado)) {
                     foreach ($resultado as $fila) {
-                        $administrador = new Administrador();
+                       // $administrador = new Administrador();
                         $administrador->setPass($fila['pass']);
+                        $administrador->setId_administrador($fila['id_administrador']);
                     }
                 }
             } catch (PDOException $exc) {

@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="../admin/nuevaNoticia.php">
                             <i class="material-icons col-deep-orange">description</i>
                             <span>Nueva Noticia</span>
                         </a>
