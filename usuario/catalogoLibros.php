@@ -39,9 +39,9 @@ $resultado = $sentencia->fetchAll();
         $cantidad= count($resultado);
         foreach ($resultado as $fila){
         ?>
-        <div class="col-md-12">
+        <div class="col-md-4">
             <div class="card">
-                <img src="https://<?php echo $_SERVER['SERVER_NAME']?>/proyectosequipomaravilla/SICAPL/fotoLibros/<?php echo $fila['foto']?>" alt="<?php echo $_SERVER['SERVER_NAME']?>/ProyectosEquipoMaravilla/SICAPL/fotoLibros/<?php echo $fila['foto']?>" style="width:100%">
+                <img src="http://<?php echo $_SERVER['SERVER_NAME']?>/proyectosequipomaravilla/SICAPL/fotoLibros/<?php echo $fila['foto']?>" alt="<?php echo $_SERVER['SERVER_NAME']?>/ProyectosEquipoMaravilla/SICAPL/fotoLibros/<?php echo $fila['foto']?>" style="width:22.825em">
                 <div class="container">
                     <h4><b><?php echo $fila['titulo'] ?></b></h4> 
                     <p><b>Autores: </b><?php echo $fila['autor'] ?></p> 
