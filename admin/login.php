@@ -78,9 +78,9 @@ if (isset($_REQUEST['nameEnviar'])) {
                             <div class="col-xs-6">
 
                             </div>
-                            <div class="col-xs-6 align-right">
+<!--                            <div class="col-xs-6 align-right">
                                 <a href="#">Olvidaste tu Contraseña?</a>
-                            </div>
+                            </div>-->
                         </div>
                     </form>
                 </div>
