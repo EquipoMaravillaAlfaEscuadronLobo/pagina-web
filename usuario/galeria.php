@@ -39,26 +39,33 @@ $resultado = $sentencia->fetchAll();
         <div class="menu">
             <ul class="list">
                 <li class="header text-center">MENU</li>
+                 <li>
+                     <a href="../usuario/home_usuario.php">
+                            <i class="material-icons col-indigo">home</i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                
                 <li>
-                    <a href="historia.php">
+                    <a href="../usuario/historia.php">
                         <i class="material-icons col-green">explore</i>
                         <span>Historia</span>
                     </a>
                 </li>
                 <li>
-                    <a href="galeria.php">
+                    <a href="../usuario/galeria.php">
                         <i class="material-icons col-blue">collections</i>
                         <span>Galerias</span>
                     </a>
                 </li>
                 <li>
-                    <a href="noticias.php">
+                    <a href="../usuario/noticias.php">
                         <i class="material-icons col-blue-grey">description</i>
                         <span>Noticias</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../usuario/catalogoLibros.php">
                         <i class="material-icons col-deep-orange">book</i>
                         <span>Catalogo de libros</span>
                     </a>
@@ -72,13 +79,13 @@ $resultado = $sentencia->fetchAll();
                 </li>
                 <li class="header">Nosotros</li>
                 <li>
-                    <a href="#">
+                    <a href="../usuario/Contactenos.php">
                         <i class="material-icons col-red">contacts</i>
                         <span>Contactenos</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="../usuario/sugerencias.php">
                         <i class="material-icons col-amber">mail</i>
                         <span>Sugerencias</span>
                     </a>
