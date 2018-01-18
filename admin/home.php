@@ -6,7 +6,7 @@ include_once '../plantilla/barra_lateral_admi.php';
 
 <section class="content">
     <div class="container-fluid">
-        <img src="../images/FONDO.jpg" alt="" height="475" width="1010">
+        <img src="../images/FONDO.jpg" alt="" height="600" width="1450">
 
     </div>
 </section>

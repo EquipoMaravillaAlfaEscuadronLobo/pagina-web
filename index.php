@@ -76,7 +76,7 @@
             <ul class="list">
                 <li class="header text-center">MENU</li>
                  <li>
-                     <a href=usuario/home_usuario.php">
+                     <a href="usuario/home_usuario.php">
                             <i class="material-icons col-indigo">home</i>
                             <span>Inicio</span>
                         </a>
@@ -101,14 +101,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="usuario/catalogoLibros.php">
                         <i class="material-icons col-deep-orange">book</i>
                         <span>Catalogo de libros</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="usuario/ver_evento.php">
                         <i class="material-icons col-deep-purple">event</i>
                         <span>Proximos Eventos</span>
                     </a>
@@ -133,7 +133,7 @@
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; 2018 <a href="../admin/login.php">UES FMP</a>.
+                &copy; 2018 <a href="admin/login.php">UES FMP</a>.
             </div>
 
         </div>
