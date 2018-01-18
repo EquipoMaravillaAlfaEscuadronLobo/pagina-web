@@ -6,7 +6,7 @@ include_once '../plantilla/barra_superior_admi.php';
 include_once '../plantilla/barra_lateral_admi.php';
 include_once '../modelos/notificaciones.php';
 include_once '../repositorios/repositorio_notificaciones.php';
-$notificaciones_pendientes = repositorio_notificaciones::notificaciones_pendientes(Conexion::obtener_conexion());
+$notificaciones_pendientes = repositorio_notificaciones::notificaciones_todas(Conexion::obtener_conexion());
 ?>    
 
 <section class="content">

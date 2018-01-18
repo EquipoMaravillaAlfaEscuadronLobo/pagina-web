@@ -48,7 +48,7 @@ if (isset($_REQUEST['nameEnviar'])) {
             </div>
             <div class="card">
                 <div class="body">
-                    <form id="FORMULARIO" method="get" name="" autocomplete="off">
+                    <form id="FORMULARIO" method="post" name="" autocomplete="off">
                         <div class="msg">Inicia tu sesión para continuar</div>
                         <div class="input-group">
                             <span class="input-group-addon">

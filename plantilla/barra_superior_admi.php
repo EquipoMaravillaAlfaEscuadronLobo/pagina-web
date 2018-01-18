@@ -39,6 +39,8 @@ echo $numero;
                         <ul class="dropdown-menu pull-right">
                             <li><a href="../admin/editar_pass.php"><i class="material-icons">create</i>Editar password</a></li>
                             <li role="seperator" class="divider"></li>
+                            <li><a href="../admin/viejas_notificaciones.php"><i class="material-icons">contact_mail</i>Norificaciones</a></li>
+                            <li role="seperator" class="divider"></li>
                             <li><a href="../sesiones/cerrar.php"><i class="material-icons">input</i>Salir</a></li>
                         </ul>
                     </div>
