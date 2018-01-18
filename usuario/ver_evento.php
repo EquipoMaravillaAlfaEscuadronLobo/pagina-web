@@ -26,7 +26,7 @@ $listado= repositorio_eventos::lista_eventos(Conexion::obtener_conexion());
                         <?php echo $fila['descripcion_evento'];?>
                         </div>
                     </div>
-                    <div class="panel-footer" id="<?php echo $fila['fecha'];?>"><?php echo 'Fecha de Evento: '. date_format(date_create($fila['fecha']), 'd-m-Y');?>
+                    <div class="panel-footer" id="<?php echo $fila['fecha'];?>"><?php echo 'Fecha de Evento: '. date_format(date_create($fila['fecha']), 'd-m-Y') .'<br>';?>
                         <div class="fb-like" data-href="http://localhost/pagina-web/usuario/noticias.php#<?php echo $fila['id_noticia'];?>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
                         <div class="fb-comments" data-href="http://localhost/pagina-web/usuario/noticias.php#<?php echo $fila['id_noticia'];?>" data-width="900" style="width: 100% !important;" data-numposts="5"></div>
                     </div>

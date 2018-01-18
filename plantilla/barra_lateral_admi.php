@@ -33,7 +33,7 @@
                     </li>
                                         
                     <li>
-                        <a href="#">
+                        <a href="../admin/nuevo_evento.php">
                             <i class="material-icons col-deep-purple">event</i>
                             <span>Nuevo Evento</span>
                         </a>

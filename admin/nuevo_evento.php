@@ -17,7 +17,7 @@ include_once '../plantilla/barra_lateral_admi.php';
     </head>
     <body>
         <section class="content">
-            <form action="" name="noticia" id="noticia" method="get">
+            <form action="" name="noticia" id="noticia" method="post">
                 <input type="hidden" name="bandera" id="bandera">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -83,7 +83,8 @@ if (isset($_REQUEST['bandera'])) {
     $resultado = repositorio_eventos::regitrar_evento(Conexion::obtener_conexion(), $evento);
     if ($resultado) {
         echo '<script>';
-        echo 'swal("Exito","Nuevo Evento publicado","success")';
+        echo 'swal("Exito","Nuevo Evento publicado","success"); location.href="home.php"';
+        
         echo '</script>';
     } else {
         echo '<script>';

@@ -22,7 +22,7 @@ class repositorio_eventos {
 
 
                 $sql = "INSERT INTO eventos ( id_administrador, titular, descripcion_evento, estado, fecha) VALUES ('1', '$tituar', '$descripcion', '1', '$fecha');";
-                echo $sql;
+//                echo $sql;
                 $sentencia = $conexion->prepare($sql);
 
                 $publicada = $sentencia->execute();
@@ -37,7 +37,12 @@ class repositorio_eventos {
         $resultado = "";
         if (isset($conexion)) {
             try {
-                $sql = "SELECT * FROM eventos WHERE estado = '1'";
+                $sql = "SELECT *
+FROM eventos
+WHERE estado = '1'
+ORDER BY
+eventos.id_evento DESC
+ ";
 
                 $resultado = $conexion->query($sql);
             } catch (PDOException $exc) {
