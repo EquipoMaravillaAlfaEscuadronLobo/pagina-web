@@ -36,19 +36,14 @@
     
     <!-- Top Bar -->
     <nav class="navbar">
-        <div class="container-fluid">
+        <marquee><div class="container-fluid">
             <div class="navbar-header">
                 <a href="#" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="#" class="bars"></a>
-                <a class="navbar-brand" href="#">Casa de Encuentro Juevenil</a>
+                <a class="navbar-brand" href="#">Casa de Encuentro Juevenil, San Jos&eacute; Verapaz</a>
             </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <a class="navbar-brand" href="#">San José Verapaz</a>
-                   
-                </ul>
-            </div>
-        </div>
+            
+        </div></marquee>
     </nav>
     <!-- #Top Bar -->
     

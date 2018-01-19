@@ -11,12 +11,15 @@ echo $numero;
 <!-- Top Bar -->
 <nav class="navbar">
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="row">
+            <div class="col-md-8"><marquee> <div class="navbar-header">
             <a href="#" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="#" class="bars"></a>
-            <marquee><a class="navbar-brand" href="index.html">Casa de Encuentro Juevenil</a></marquee>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
+           <a class="navbar-brand" href="home.html">Casa de Encuentro Juevenil</a>
+        </div></marquee></div>
+
+        <div class="col-md-4">
+            <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
                 <!-- Call Search -->
 
@@ -51,6 +54,10 @@ echo $numero;
 
             </ul>
         </div>
+        </div>
+        </div>
+        
+        
     </div>
 </nav>
 <!-- #Top Bar -->
