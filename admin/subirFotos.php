@@ -25,7 +25,7 @@
       echo '</script>';
 
   }
-      //header("Location: admin.php");
+      header("Location: nuevaGaleria.php");
   
  
 
